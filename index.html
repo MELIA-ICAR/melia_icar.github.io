@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,279 +17,291 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            scroll-behavior:smooth;
         }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            background: #f5f7fa;
-            color: #333;
+        body{
+            font-family:'Poppins',sans-serif;
+            background:#f5f7fa;
+            color:#333;
+            line-height:1.7;
         }
 
         /* NAVBAR */
 
-        nav {
-            width: 100%;
-            background: #0b3d2e;
-            padding: 15px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        nav{
+            width:100%;
+            background:#0b3d2e;
+            padding:15px 8%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            position:sticky;
+            top:0;
+            z-index:1000;
         }
 
-        nav h2 {
-            color: white;
-            font-size: 28px;
+        nav h2{
+            color:white;
+            font-size:28px;
         }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
+        nav ul{
+            display:flex;
+            list-style:none;
+            gap:30px;
         }
 
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            transition: 0.3s;
+        nav ul li a{
+            text-decoration:none;
+            color:white;
+            font-weight:500;
+            transition:0.3s;
         }
 
-        nav ul li a:hover {
-            color: #9fe870;
+        nav ul li a:hover{
+            color:#9fe870;
         }
 
         /* HERO SECTION */
 
-        .hero {
-            height: 90vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5),
-                    rgba(0, 0, 0, 0.5)),
-                url('https://images.unsplash.com/photo-1506744038136-46273834b3fb')
-                center/cover no-repeat;
+        .hero{
+            height:90vh;
+            background:
+            linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url('https://images.unsplash.com/photo-1506744038136-46273834b3fb')
+            center/cover no-repeat;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 20px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            color:white;
+            padding:20px;
         }
 
-        .hero-content h1 {
-            font-size: 60px;
-            margin-bottom: 20px;
+        .hero-content h1{
+            font-size:60px;
+            margin-bottom:20px;
         }
 
-        .hero-content p {
-            font-size: 20px;
-            max-width: 800px;
-            margin: auto;
+        .hero-content p{
+            max-width:850px;
+            margin:auto;
+            font-size:20px;
         }
 
-        .hero-content button {
-            margin-top: 30px;
-            padding: 14px 30px;
-            border: none;
-            background: #9fe870;
-            color: #000;
-            font-size: 18px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s;
+        .hero-content button{
+            margin-top:30px;
+            padding:14px 32px;
+            border:none;
+            background:#9fe870;
+            color:#000;
+            font-size:18px;
+            border-radius:8px;
+            cursor:pointer;
+            transition:0.3s;
         }
 
-        .hero-content button:hover {
-            background: white;
+        .hero-content button:hover{
+            background:white;
         }
 
-        /* SECTION */
+        /* GENERAL SECTION */
 
-        section {
-            padding: 80px 8%;
+        section{
+            padding:80px 8%;
         }
 
-        .section-title {
-            text-align: center;
-            font-size: 40px;
-            color: #0b3d2e;
-            margin-bottom: 50px;
+        .section-title{
+            text-align:center;
+            font-size:42px;
+            color:#0b3d2e;
+            margin-bottom:50px;
         }
 
         /* ABOUT */
 
-        .about {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
+        .about-section{
+            background:white;
         }
 
-        .about img {
-            width: 100%;
-            border-radius: 15px;
+        .about-content{
+            max-width:1100px;
+            margin:auto;
         }
 
-        .about-text p {
-            margin-bottom: 20px;
-            font-size: 17px;
+        .about-content p{
+            margin-bottom:25px;
+            font-size:17px;
+            text-align:justify;
         }
 
         /* TEAM */
 
-        .team-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+        .team-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:30px;
         }
 
-        .team-card {
-            background: white;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: 0.3s;
+        .team-card{
+            background:white;
+            padding:25px;
+            border-radius:15px;
+            text-align:center;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+            transition:0.3s;
         }
 
-        .team-card:hover {
-            transform: translateY(-10px);
+        .team-card:hover{
+            transform:translateY(-10px);
         }
 
-        .team-card img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
+        .team-card img{
+            width:120px;
+            height:120px;
+            border-radius:50%;
+            object-fit:cover;
+            margin-bottom:20px;
         }
 
-        .team-card h3 {
-            color: #0b3d2e;
+        .team-card h3{
+            color:#0b3d2e;
+            margin-bottom:10px;
         }
 
         /* RESOURCES */
 
-        .resources-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+        .resources-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:30px;
         }
 
-        .resource-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        .resource-card{
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+            transition:0.3s;
         }
 
-        .resource-card i {
-            font-size: 40px;
-            color: #0b3d2e;
-            margin-bottom: 20px;
+        .resource-card:hover{
+            transform:translateY(-8px);
         }
 
-        .resource-card a {
-            display: inline-block;
-            margin-top: 15px;
-            text-decoration: none;
-            color: #0b3d2e;
-            font-weight: 600;
+        .resource-card i{
+            font-size:42px;
+            color:#0b3d2e;
+            margin-bottom:20px;
+        }
+
+        .resource-card h3{
+            margin-bottom:15px;
+        }
+
+        .resource-card a{
+            display:inline-block;
+            margin-top:15px;
+            text-decoration:none;
+            color:#0b3d2e;
+            font-weight:600;
         }
 
         /* VISUALISATIONS */
 
-        .visual-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
+        .visual-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+            gap:30px;
         }
 
-        .visual-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        .visual-card{
+            background:white;
+            border-radius:15px;
+            overflow:hidden;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .visual-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
+        .visual-card img{
+            width:100%;
+            height:250px;
+            object-fit:cover;
         }
 
-        .visual-card h3 {
-            padding: 20px;
-            color: #0b3d2e;
+        .visual-card h3{
+            padding:20px;
+            color:#0b3d2e;
         }
 
         /* CONTACT */
 
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
+        .contact-container{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:40px;
         }
 
-        .contact-info {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
+        .contact-info{
+            background:white;
+            padding:40px;
+            border-radius:15px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .contact-info p {
-            margin-bottom: 20px;
-            font-size: 17px;
+        .contact-info p{
+            margin-bottom:20px;
+            font-size:17px;
         }
 
-        iframe {
-            width: 100%;
-            height: 350px;
-            border: none;
-            border-radius: 15px;
+        iframe{
+            width:100%;
+            height:350px;
+            border:none;
+            border-radius:15px;
         }
 
         /* FOOTER */
 
-        footer {
-            background: #0b3d2e;
-            color: white;
-            text-align: center;
-            padding: 20px;
+        footer{
+            background:#0b3d2e;
+            color:white;
+            text-align:center;
+            padding:20px;
         }
 
         /* RESPONSIVE */
 
-        @media(max-width: 900px) {
+        @media(max-width:900px){
 
-            .about,
-            .contact-container {
-                grid-template-columns: 1fr;
+            nav{
+                flex-direction:column;
+                gap:15px;
             }
 
-            .hero-content h1 {
-                font-size: 42px;
+            nav ul{
+                flex-wrap:wrap;
+                justify-content:center;
             }
 
-            nav {
-                flex-direction: column;
-                gap: 15px;
+            .hero-content h1{
+                font-size:42px;
             }
 
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
+            .contact-container{
+                grid-template-columns:1fr;
             }
+
         }
+
     </style>
+
 </head>
 
 <body>
@@ -296,6 +309,7 @@
     <!-- NAVBAR -->
 
     <nav>
+
         <h2>MELIA Unit</h2>
 
         <ul>
@@ -306,6 +320,7 @@
             <li><a href="#visuals">Visualisations</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+
     </nav>
 
     <!-- HERO SECTION -->
@@ -313,65 +328,56 @@
     <section class="hero" id="home">
 
         <div class="hero-content">
+
             <h1>MELIA Unit - ICAR</h1>
 
             <p>
-                Monitoring, Evaluation, Learning and Impact Assessment Unit
-                focused on agricultural research, policy analysis,
-                data visualisation and evidence-based insights.
+                Monitoring, Evaluation, Learning and Impact Assessment Unit 
+                focused on agricultural research, policy analysis, 
+                data visualisation and evidence-based decision-making.
             </p>
 
             <button>Explore More</button>
+
         </div>
-
-   <section id="about-us" class="about-section">
-
-    <div class="container">
-
-        <h2>About Us</h2>
-
-        <p>
-            The Monitoring, Evaluation, Learning, and Impact Assessment (MELIA) Unit 
-            at <strong>ICAR-NIAP</strong> has been established to strengthen 
-            evidence-based planning, monitoring, evaluation, and institutional learning 
-            across the ICAR research and education system. As the apex organization for 
-            coordinating and managing agricultural research and education in India, 
-            ICAR plays a vital role in ensuring food, nutritional, and environmental security.
-        </p>
-
-        <p>
-            The MELIA Unit serves as a central coordination platform for ICAR institutes, 
-            supporting systematic monitoring of projects and programmes against defined 
-            targets, timelines, and resources. The Unit focuses on evaluating the 
-            effectiveness, efficiency, relevance, and sustainability of agricultural 
-            research initiatives while promoting transparency, accountability, and 
-            adaptive management within the research ecosystem.
-        </p>
-
-        <p>
-            MELIA also emphasizes institutional learning by documenting best practices, 
-            identifying challenges, and supporting continuous improvement in programme 
-            implementation and policy decision-making. The Unit assesses the impact of 
-            ICAR technologies and interventions on agricultural productivity, food security, 
-            rural livelihoods, climate resilience, and sustainable agricultural development.
-        </p>
-
-        <p>
-            To strengthen data-driven governance, the MELIA Unit works toward integrating 
-            existing ICAR data systems, including institute MIS platforms, KVK reporting 
-            systems, and legacy programme databases. By promoting standardized reporting 
-            systems, interoperability, and robust data analysis, the Unit aims to support 
-            informed decision-making and enhance the overall effectiveness of agricultural 
-            research and development initiatives in India.
-        </p>
-        
-        </div>
-        
-   </div>
 
     </section>
 
-    <!-- TEAM -->
+    <!-- ABOUT SECTION -->
+
+    <section id="about" class="about-section">
+
+        <h2 class="section-title">About Us</h2>
+
+        <div class="about-content">
+
+            <p>
+                The Monitoring, Evaluation, Learning, and Impact Assessment (MELIA) Unit 
+                at <strong>ICAR-NIAP</strong> has been established to strengthen 
+                evidence-based planning, monitoring, evaluation, and institutional learning 
+                across the ICAR research and education system.
+            </p>
+
+            <p>
+                The Unit serves as a central coordination platform for ICAR institutes, 
+                supporting systematic monitoring of projects and programmes against defined 
+                targets, timelines, and resources. MELIA focuses on improving transparency, 
+                accountability, effectiveness, and sustainability of agricultural research 
+                initiatives and development programmes.
+            </p>
+
+            <p>
+                The Unit also promotes data-driven governance and adaptive management by 
+                integrating ICAR data systems, strengthening reporting mechanisms, and 
+                assessing the impact of ICAR technologies and interventions on food security, 
+                rural livelihoods, climate resilience, and sustainable agricultural development.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- TEAM SECTION -->
 
     <section id="team">
 
@@ -380,34 +386,40 @@
         <div class="team-container">
 
             <div class="team-card">
+
                 <img src="https://randomuser.me/api/portraits/men/32.jpg">
 
                 <h3>Dr. ABC</h3>
 
                 <p>Head of Unit</p>
+
             </div>
 
             <div class="team-card">
+
                 <img src="https://randomuser.me/api/portraits/women/44.jpg">
 
                 <h3>Dr. XYZ</h3>
 
                 <p>Scientist</p>
+
             </div>
 
             <div class="team-card">
+
                 <img src="https://randomuser.me/api/portraits/men/67.jpg">
 
                 <h3>Research Associate</h3>
 
                 <p>Data Analytics</p>
+
             </div>
 
         </div>
 
     </section>
 
-    <!-- RESOURCES -->
+    <!-- RESOURCES SECTION -->
 
     <section id="resources">
 
@@ -422,8 +434,8 @@
                 <h3>Documents</h3>
 
                 <p>
-                    Access reports, publications, datasets,
-                    policy briefs and research documents.
+                    Access reports, policy briefs, publications,
+                    datasets and research documents.
                 </p>
 
                 <a href="#">View Documents →</a>
@@ -437,8 +449,8 @@
                 <h3>Videos</h3>
 
                 <p>
-                    Explore training sessions, webinars,
-                    workshops and research presentations.
+                    Explore webinars, workshops, training sessions
+                    and research presentations.
                 </p>
 
                 <a href="#">Watch Videos →</a>
