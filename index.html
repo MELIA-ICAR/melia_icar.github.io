@@ -137,17 +137,19 @@
 
         /* ABOUT */
 
-        .about-section{
-            background:white;
-        }
-
-        .about-content{
+                .about-content{
             max-width:1100px;
             margin:auto;
-            text-align:center;
+            display:flex;
+            align-items:center;
+            gap:50px;
         }
-
-        .about-content p{
+        
+        .about-text{
+            flex:1;
+        }
+        
+        .about-text p{
             margin-bottom:25px;
             font-size:17px;
             text-align:justify;
@@ -366,6 +368,7 @@
             alt="ICAR Logo"
             class="icar-logo">
 
+        <div class="about-text">
             <p>
                 The Monitoring, Evaluation, Learning, and Impact Assessment (MELIA) Unit 
                 at <strong>ICAR-NIAP</strong> has been established to strengthen 
