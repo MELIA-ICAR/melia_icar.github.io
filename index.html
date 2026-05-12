@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MELIA Unit - ICAR</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background: #f5f7fa;
+            color: #333;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            width: 100%;
+            background: #0b3d2e;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav h2 {
+            color: white;
+            font-size: 28px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #9fe870;
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1506744038136-46273834b3fb')
+                center/cover no-repeat;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .hero-content button {
+            margin-top: 30px;
+            padding: 14px 30px;
+            border: none;
+            background: #9fe870;
+            color: #000;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .hero-content button:hover {
+            background: white;
+        }
+
+        /* SECTION */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            color: #0b3d2e;
+            margin-bottom: 50px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 17px;
+        }
+
+        /* TEAM */
+
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .team-card h3 {
+            color: #0b3d2e;
+        }
+
+        /* RESOURCES */
+
+        .resources-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .resource-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .resource-card i {
+            font-size: 40px;
+            color: #0b3d2e;
+            margin-bottom: 20px;
+        }
+
+        .resource-card a {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #0b3d2e;
+            font-weight: 600;
+        }
+
+        /* VISUALISATIONS */
+
+        .visual-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .visual-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .visual-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .visual-card h3 {
+            padding: 20px;
+            color: #0b3d2e;
+        }
+
+        /* CONTACT */
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .contact-info p {
+            margin-bottom: 20px;
+            font-size: 17px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 350px;
+            border: none;
+            border-radius: 15px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0b3d2e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width: 900px) {
+
+            .about,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 42px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+        <h2>MELIA Unit</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#visuals">Visualisations</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <h1>MELIA Unit - ICAR</h1>
+
+            <p>
+                Monitoring, Evaluation, Learning and Impact Assessment Unit
+                focused on agricultural research, policy analysis,
+                data visualisation and evidence-based insights.
+            </p>
+
+            <button>Explore More</button>
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <h2 class="section-title">About Us</h2>
+
+        <div class="about">
+
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216"
+                alt="About">
+
+            <div class="about-text">
+
+                <p>
+                    The MELIA Unit under ICAR works towards strengthening
+                    monitoring, evaluation, impact assessment, and learning
+                    systems in agricultural research and development.
+                </p>
+
+                <p>
+                    The unit supports evidence-based policymaking through
+                    advanced analytics, surveys, data management,
+                    and visualisation techniques.
+                </p>
+
+                <p>
+                    Our objective is to improve agricultural systems through
+                    reliable data, innovative research methodologies,
+                    and impactful collaborations.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TEAM -->
+
+    <section id="team">
+
+        <h2 class="section-title">Our Team</h2>
+
+        <div class="team-container">
+
+            <div class="team-card">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+                <h3>Dr. ABC</h3>
+
+                <p>Head of Unit</p>
+            </div>
+
+            <div class="team-card">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg">
+
+                <h3>Dr. XYZ</h3>
+
+                <p>Scientist</p>
+            </div>
+
+            <div class="team-card">
+                <img src="https://randomuser.me/api/portraits/men/67.jpg">
+
+                <h3>Research Associate</h3>
+
+                <p>Data Analytics</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- RESOURCES -->
+
+    <section id="resources">
+
+        <h2 class="section-title">Resources</h2>
+
+        <div class="resources-container">
+
+            <div class="resource-card">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+                <h3>Documents</h3>
+
+                <p>
+                    Access reports, publications, datasets,
+                    policy briefs and research documents.
+                </p>
+
+                <a href="#">View Documents →</a>
+
+            </div>
+
+            <div class="resource-card">
+
+                <i class="fa-solid fa-video"></i>
+
+                <h3>Videos</h3>
+
+                <p>
+                    Explore training sessions, webinars,
+                    workshops and research presentations.
+                </p>
+
+                <a href="#">Watch Videos →</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- VISUALISATIONS -->
+
+    <section id="visuals">
+
+        <h2 class="section-title">Visualisations</h2>
+
+        <div class="visual-grid">
+
+            <div class="visual-card">
+
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+
+                <h3>Agricultural Survey Dashboard</h3>
+
+            </div>
+
+            <div class="visual-card">
+
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
+
+                <h3>Data Analytics & Trends</h3>
+
+            </div>
+
+            <div class="visual-card">
+
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40">
+
+                <h3>GIS & Spatial Analysis</h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <h2 class="section-title">Contact Us</h2>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+
+                <p><strong>Email:</strong> melia@icar.gov.in</p>
+
+                <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
+
+                <p><strong>Location:</strong> ICAR Campus, India</p>
+
+                <p>
+                    For collaborations, research support,
+                    workshops and project inquiries,
+                    feel free to contact us.
+                </p>
+
+            </div>
+
+            <iframe
+                src="https://maps.google.com/maps?q=india&t=&z=5&ie=UTF8&iwloc=&output=embed">
+            </iframe>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 MELIA Unit - ICAR | All Rights Reserved
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
