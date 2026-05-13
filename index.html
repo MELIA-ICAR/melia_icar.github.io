@@ -80,7 +80,7 @@
 
         /* HERO SECTION */
 
-           .hero{
+       .hero{
     height:90vh;
     display:flex;
     justify-content:center;
@@ -89,10 +89,64 @@
     color:white;
     padding:20px;
 
-    animation:slideShow 12s infinite;
+    animation:slideShow 25s infinite;
 
     background-size:cover;
     background-position:center;
+}
+
+/* BACKGROUND SLIDESHOW */
+
+@keyframes slideShow{
+
+    0%{
+        background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('background_1');
+        background-size:cover;
+        background-position:center;
+    }
+
+    20%{
+        background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('background_2');
+        background-size:cover;
+        background-position:center;
+    }
+
+    40%{
+        background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('background_3');
+        background-size:cover;
+        background-position:center;
+    }
+
+    60%{
+        background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('background_4');
+        background-size:cover;
+        background-position:center;
+    }
+
+    80%{
+        background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('background_5.jfif');
+        background-size:cover;
+        background-position:center;
+    }
+
+    100%{
+        background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('background_1');
+        background-size:cover;
+        background-position:center;
+    }
+
 }
 
 /* SLIDING BACKGROUNDS */
