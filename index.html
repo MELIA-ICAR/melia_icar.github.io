@@ -80,20 +80,50 @@
 
         /* HERO SECTION */
 
-            .hero{
-        height:90vh;
+           .hero{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+
+    animation:slideShow 12s infinite;
+
+    background-size:cover;
+    background-position:center;
+}
+
+/* SLIDING BACKGROUNDS */
+
+@keyframes slideShow{
+
+    0%{
         background:
         linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-        url('background.JPG')
-        center/cover no-repeat;
+        url('background_1');
+        background-size:cover;
+        background-position:center;
+    }
 
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            color:white;
-            padding:20px;
-        }
+    50%{
+        background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('background_2');
+        background-size:cover;
+        background-position:center;
+    }
+
+    100%{
+        background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url('background_1');
+        background-size:cover;
+        background-position:center;
+    }
+
+}
 
         .hero-content h1{
             font-size:60px;
